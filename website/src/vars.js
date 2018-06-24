@@ -5,4 +5,5 @@ export default {
   mobileSize: 425,
   tabletSize: 768,
   desktopSize: 1024,
+  desktopLargeSize: 1440,
 };

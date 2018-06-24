@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Button = props => {
-  console.log(props, "here");
   return (
     <ButtonWrapper {...props}>
       <ButtonLink color={props.textcolor} to={props.to}>
