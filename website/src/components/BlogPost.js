@@ -1,17 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import vars from "../vars";
 
 class BlogPost extends React.Component {
   render() {
-    const { column, image, title, summary, date, author } = this.props;
+    const { column, image, title, summary, date, author, url } = this.props;
     return (
       <Wrapper column={column}>
         {image && <Image src={image} column={column} />}
         <BlogContent>
           <Title>{title}</Title>
-          <Summary>{summary}</Summary>
+          <Summary>
+            {summary}... <Link to={url}>Read More</Link>
+          </Summary>
           <DateAuthor>
             <div>{date}</div>
             <div>&nbsp;&nbsp;/&nbsp;&nbsp;</div>

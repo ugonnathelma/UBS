@@ -17,7 +17,7 @@ class BlogSection extends React.Component {
             summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
             date="JUN 22, 2018"
             author="JOHN DOE"
-            url="/scholar"
+            url="/#"
           />
         </MostRecentPost>
         <TwoRecentPosts>
@@ -27,7 +27,7 @@ class BlogSection extends React.Component {
             summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
             date="JUN 22, 2018"
             author="JOHN DOE"
-            url="/scholar"
+            url="/#"
           />
           <BlogPost
             image={GraduateImage}
@@ -35,7 +35,7 @@ class BlogSection extends React.Component {
             summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
             date="JUN 22, 2018"
             author="JOHN DOE"
-            url="/scholar"
+            url="/#"
           />
         </TwoRecentPosts>
       </Section>

@@ -207,13 +207,13 @@ const SecondaryHeader = styled.div`
   }
 
   @media screen and (max-width: ${vars.tabletSize}px) {
-    height: 15vh;
+    height: 7%;
     border: none;
     background: ${vars.primaryColor};
     width: 100%;
   }
   @media screen and (max-width: ${vars.tabletSize - 1}px) {
-    height: 23vh;
+    height: 10%;
   }
 `;
 
