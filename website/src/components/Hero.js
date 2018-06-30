@@ -22,7 +22,6 @@ class Hero extends React.Component {
             value="GET STARTED"
           />
         </div>
-        
       </HeroFullWidth>
     );
   }
@@ -33,6 +32,7 @@ const HeroFullWidth = styled.div`
     width: 40%;
     text-align: right;
     line-height: 1.5em;
+    font-weight: 500;
     color: ${vars.primaryColor};
     background: rgba(255, 255, 255, 0.6);
     padding: 2%;
@@ -41,7 +41,9 @@ const HeroFullWidth = styled.div`
       margin-top: -6em;
     }
 
-    @media screen and (min-width: ${props =>props.mobileSize + 1}px) and (max-width: ${props =>props.tabletSize}px) {
+    @media screen and (min-width: ${props =>
+        props.mobileSize + 1}px) and (max-width: ${props =>
+        props.tabletSize}px) {
       width: 50%;
       font-size: 130%;
       margin-top: -3em;
@@ -83,7 +85,8 @@ const HeroFullWidth = styled.div`
     }
   }
 
-  @media screen and (min-width: ${props => props.mobileSize + 1}px) and (max-width: ${props => props.tabletSize}px) {
+  @media screen and (min-width: ${props =>
+      props.mobileSize + 1}px) and (max-width: ${props => props.tabletSize}px) {
     height: 80vw;
   }
 
