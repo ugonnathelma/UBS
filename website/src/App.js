@@ -8,6 +8,7 @@ import LandingPage from "./components/LandingPage";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
 import Programmes from "./components/Programmes";
+import News from "./components/News";
 import Footer from "./components/Footer";
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route exact path="/about" component={AboutUs} />
           <Route exact path="/programmes" component={Programmes} />
           <Route exact path="/contact" component={ContactUs} />
+          <Route exact path="/news" component={News} />
         </Body>
         <Footer />
       </div>
@@ -28,7 +30,6 @@ class App extends Component {
 }
 
 const Body = styled.div`
-  min-height: 630px;
   padding: 0px;
   margin: 0px;
 `;

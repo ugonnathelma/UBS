@@ -4,7 +4,7 @@ import styled from "styled-components";
 import BodyWrapper from "./BodyWrapper";
 import ImageMessage from "./ImageMessage";
 
-import ComputerUser from "../images/man-computer.jpg";
+import Woman from "../images/businesswoman.jpg";
 
 import vars from "../vars";
 
@@ -12,11 +12,7 @@ class ContactUs extends React.Component {
   render() {
     return (
       <Wrapper>
-        <ImageMessageCustom
-          background={ComputerUser}
-          style={{ height: "900px", border: "3px solid red" }}
-          full={1}
-        >
+        <ImageMessageCustom background={Woman} full={1}>
           <IntroMessageCustom position="right">
             <h1>Contact Us</h1>
             <hr />
@@ -71,14 +67,20 @@ const IntroMessage = styled.div`
   }
 `;
 
-const Wrapper = styled(BodyWrapper)`
-  p {
-    line-height: 2em;
-  }
-`;
+const Body = styled(BodyWrapper)``;
 
-const ImageMessageCustom = styled(ImageMessage)`
-  border: 2px solid red;
+const ImageMessageCustom = styled(ImageMessage)``;
+
+const Wrapper = styled.div`
+  height: 100vh;
+  ${Body} {
+    height: 100vh;
+  }
+  ${ImageMessageCustom} {
+    @media screen and (min-width: ${vars.desktopSize}px) {
+      margin-top: -12em;
+    }
+  }
 `;
 
 const IntroMessageCustom = IntroMessage.extend`

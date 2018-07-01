@@ -4,7 +4,11 @@ import vars from "../vars";
 
 class BodyWrapper extends React.Component {
   render() {
-    return <Body>{this.props.children}</Body>;
+    return (
+      <div>
+        <Body>{this.props.children}</Body>
+      </div>
+    );
   }
 }
 

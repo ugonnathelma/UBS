@@ -9,7 +9,12 @@ import "../fonts/font-awesome.min.css";
 
 class Navigation extends React.Component {
   state = {
-    isLargerThanTablet: window.screen.width > vars.tabletSize
+    isLargerThanTablet: window.screen.width > vars.tabletSize,
+    showNav: false
+  };
+
+  toggleNav = () => {
+    this.setState({ showNav: !this.state.showNav });
   };
 
   componentDidMount() {
@@ -60,14 +65,46 @@ class Navigation extends React.Component {
                 <NavLink to="/contact">CONTACT US</NavLink>
               </React.Fragment>
             ) : (
-              <MenuIcon />
+              <a onClick={this.toggleNav}>
+                <MenuIcon />
+              </a>
             )}
           </PrimaryHeader>
         </PrimaryWrapper>
+        <MobileMenu show={this.state.showNav}>
+          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/about">ABOUT US</NavLink>
+          <NavLink to="/programmes">PROGRAMMES</NavLink>
+          <NavLink to="/news">NEWS</NavLink>
+          <NavLink to="/contact">CONTACT US</NavLink>
+        </MobileMenu>
       </FullHeader>
     );
   }
 }
+
+const NavLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+  margin-top: 18px;
+`;
+
+const MobileMenu = styled.div`
+  flex-direction: column !important;
+  position: absolute;
+  background: ${vars.secondaryColor};
+  width: 100%;
+  display: ${props => (props.show ? "flex" : "none")};
+
+  ${NavLink} {
+    padding: 1em;
+    color: ${vars.whiteColor};
+  }
+
+  ${NavLink}:hover {
+    background: ${vars.primaryColor};
+  }
+`;
 
 const ContactDetails = styled.div`
   flex: 1;
@@ -98,16 +135,13 @@ const ContactDetails = styled.div`
     @media screen and (min-width: ${vars.tabletSize}px) and (max-width: ${vars.desktopSize}px) {
       justify-content: flex-start;
     }
-
-    
   }
 
   & > span:first-child span {
     @media screen and (max-width: ${vars.tabletSize - 1}px) {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: .5em;
-      
+      margin-bottom: 0.5em;
     }
   }
 
@@ -155,13 +189,13 @@ const HeaderText = styled.div`
 `;
 
 const SocialMedia = styled.div`
-@media screen and (max-width: ${vars.tabletSize - 1}px) {
+  @media screen and (max-width: ${vars.tabletSize - 1}px) {
     align-self: flex-start !important;
 
     *:first-child {
-      margin-left:0em;
+      margin-left: 0em;
     }
-}
+  }
 `;
 
 const LogoWrapper = styled.div`
@@ -189,12 +223,6 @@ const PrimaryHeader = styled.div`
   }
 `;
 
-const NavLink = styled(Link)`
-  text-decoration: none;
-  color: white;
-  margin-top: 18px;
-`;
-
 const SecondaryHeader = styled.div`
   border-top: 3.5em solid ${vars.primaryColor};
   border-left: 90px solid transparent;
@@ -213,13 +241,14 @@ const SecondaryHeader = styled.div`
     border-top: 4.5em solid ${vars.primaryColor};
   }
 
-  @media screen and (min-width: ${vars.tabletSize}px) and (max-width: ${vars.desktopSize - 1}px){
-    height: 6%;
+  @media screen and (min-width: ${vars.tabletSize}px) and (max-width: ${vars.desktopSize -
+      1}px) {
+    height: 8%;
     border: none;
     background: ${vars.primaryColor};
     width: 100%;
   }
-  
+
   @media screen and (max-width: ${vars.tabletSize - 1}px) {
     position: relative;
     height: 6.8em;

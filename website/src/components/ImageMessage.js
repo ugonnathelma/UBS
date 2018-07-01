@@ -19,7 +19,7 @@ const IntroImage = styled.div`
   height: ${props => {
     if (!props.divider && !props.full) return "550px";
     if (props.divider && !props.full) return "350px";
-    if (props.full) return "97vh";
+    if (props.full) return "100vh";
   }};
   background-size: cover;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@ const IntroImage = styled.div`
   }
 
   @media screen and (min-width: ${vars.desktopLargeSize + 1}px) {
-    height: ${props => (!props.divider ? "750px" : "50px")};
+    height: ${props => (!props.divider ? "100vh" : "550px")};
     line-height: 3em;
     font-size: 140%;
   }

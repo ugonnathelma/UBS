@@ -6,7 +6,15 @@ import vars from "../vars";
 
 class BlogPost extends React.Component {
   render() {
-    const { column, image, title, summary, date, author, url } = this.props;
+    const {
+      column,
+      image,
+      title,
+      summary,
+      date,
+      author,
+      url
+    } = this.props;
     return (
       <Wrapper column={column}>
         {image && <Image src={image} column={column} />}
