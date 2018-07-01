@@ -98,6 +98,7 @@ const HeroFullWidth = styled.div`
   @media screen and (max-width: ${vars.mobileSize}px) {
     height: 180vw;
     background-position: 0px 20px;
+    margin-top: -13em;
   }
 `;
 

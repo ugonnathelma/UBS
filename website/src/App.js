@@ -6,6 +6,7 @@ import "./App.css";
 import Navigation from "./components/Navigation";
 import LandingPage from "./components/LandingPage";
 import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
 import Programmes from "./components/Programmes";
 import Footer from "./components/Footer";
 
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/about" component={AboutUs} />
           <Route exact path="/programmes" component={Programmes} />
+          <Route exact path="/contact" component={ContactUs} />
         </Body>
         <Footer />
       </div>

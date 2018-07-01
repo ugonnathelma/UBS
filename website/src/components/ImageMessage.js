@@ -5,9 +5,9 @@ import vars from "../vars";
 
 class ImageMessage extends React.Component {
   render() {
-    const { background, divider } = this.props;
+    const { background, divider, full } = this.props;
     return (
-      <IntroImage background={background} divider={divider}>
+      <IntroImage background={background} divider={divider} full={full}>
         {this.props.children}
       </IntroImage>
     );
@@ -16,7 +16,11 @@ class ImageMessage extends React.Component {
 
 const IntroImage = styled.div`
   background: url(${props => props.background});
-  height: ${props => (!props.divider ? "550px" : "350px")};
+  height: ${props => {
+    if (!props.divider && !props.full) return "550px";
+    if (props.divider && !props.full) return "350px";
+    if (props.full) return "97vh";
+  }};
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;

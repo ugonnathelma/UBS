@@ -146,9 +146,11 @@ const HeaderText = styled.div`
 
   @media screen and (max-width: ${vars.tabletSize - 1}px) {
     display: flex;
+    position: absolute;
     height: 6em;
     flex-direction: column;
     width: 90%;
+    padding: 0.3em 0em;
   }
 `;
 
@@ -201,26 +203,26 @@ const SecondaryHeader = styled.div`
   position: absolute;
   right: 0;
 
-  @media screen and (max-width: ${vars.desktopSize}px) {
-    width: 80%;
-    border-top: 4.5em solid ${vars.primaryColor};
-  }
   @media screen and (min-width: ${vars.desktopSize + 1}px) {
     width: 80%;
     border-top: 4.5em solid ${vars.primaryColor};
   }
 
-  @media screen and (max-width: ${vars.tabletSize - 1}px) {
-    height: 16%;
+  @media screen and (max-width: ${vars.desktopSize}px) {
+    width: 80%;
+    border-top: 4.5em solid ${vars.primaryColor};
+  }
+
+  @media screen and (min-width: ${vars.tabletSize}px) and (max-width: ${vars.desktopSize - 1}px){
+    height: 6%;
     border: none;
     background: ${vars.primaryColor};
     width: 100%;
   }
-
-
-  @media screen and (min-width: ${vars.tabletSize}px) and (max-width: ${vars.desktopSize - 1}px){
-    height: 10%;
-    border: none;
+  
+  @media screen and (max-width: ${vars.tabletSize - 1}px) {
+    position: relative;
+    height: 6.8em;
     background: ${vars.primaryColor};
     width: 100%;
   }
@@ -232,7 +234,7 @@ const SecondaryWrapper = styled.div`
   padding: 0em 4em;
 
   @media screen and (max-width: ${vars.tabletSize - 1}px) {
-    padding: 0em 1em;
+    padding: 0em 0em;
   }
 `;
 
