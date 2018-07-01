@@ -8,7 +8,7 @@ import HeroImage from "../images/hero.jpg";
 class Hero extends React.Component {
   render() {
     return (
-      <HeroFullWidth mobileSize={vars.mobileSize} tabletSize={vars.tabletSize}>
+      <HeroFullWidth>
         <div>
           <h1>
             Sign up for customized programmes and acquire real-world business
@@ -37,26 +37,31 @@ const HeroFullWidth = styled.div`
     background: rgba(255, 255, 255, 0.6);
     padding: 2%;
 
-    @media screen and (min-width: ${props => props.desktopLargeSize + 1}px) {
+    @media screen and (min-width: ${vars.desktopLargeSize + 1}px) {
       margin-top: -6em;
     }
 
-    @media screen and (min-width: ${props =>
-        props.mobileSize + 1}px) and (max-width: ${props =>
-        props.tabletSize}px) {
+    @media screen and (min-width: ${vars.tabletSize +
+        1}px) and (max-width: ${vars.desktopLargeSize}px) {
+      font-size: 200%;
+      width: 50%;
+    }
+
+    @media screen and (min-width: ${vars.mobileSize +
+        1}px) and (max-width: ${vars.tabletSize}px) {
       width: 50%;
       font-size: 130%;
       margin-top: -3em;
     }
 
-    @media screen and (max-width: ${props => props.mobileSize}px) {
+    @media screen and (max-width: ${vars.mobileSize}px) {
       font-size: 130%;
       width: 80%;
-      margin-top: 9em;
+      margin-top: 2em;
       text-align: center;
     }
   }
-
+  
   background-image: url(${HeroImage});
   background-repeat: no-repeat;
   background-position: 0px -30px;
@@ -73,25 +78,25 @@ const HeroFullWidth = styled.div`
     flex-direction: column;
     padding-right: 4em;
 
-    @media screen and (max-width: ${props => props.mobileSize}px) {
+    @media screen and (max-width: ${vars.mobileSize}px) {
       padding-right: 0em;
     }
   }
 
   & > div * {
     align-self: flex-end;
-    @media screen and (max-width: ${props => props.mobileSize}px) {
+    @media screen and (max-width: ${vars.mobileSize}px) {
       align-self: center;
     }
   }
 
-  @media screen and (min-width: ${props =>
-      props.mobileSize + 1}px) and (max-width: ${props => props.tabletSize}px) {
+  @media screen and (min-width: ${vars.mobileSize +
+      1}px) and (max-width: ${vars.tabletSize}px) {
     height: 80vw;
   }
 
-  @media screen and (max-width: ${props => props.mobileSize}px) {
-    height: 150vw;
+  @media screen and (max-width: ${vars.mobileSize}px) {
+    height: 180vw;
     background-position: 0px 20px;
   }
 `;

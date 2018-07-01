@@ -202,18 +202,27 @@ const SecondaryHeader = styled.div`
   right: 0;
 
   @media screen and (max-width: ${vars.desktopSize}px) {
-    width: 70%;
+    width: 80%;
+    border-top: 4.5em solid ${vars.primaryColor};
+  }
+  @media screen and (min-width: ${vars.desktopSize + 1}px) {
+    width: 80%;
     border-top: 4.5em solid ${vars.primaryColor};
   }
 
-  @media screen and (max-width: ${vars.tabletSize}px) {
-    height: 7%;
+  @media screen and (max-width: ${vars.tabletSize - 1}px) {
+    height: 16%;
     border: none;
     background: ${vars.primaryColor};
     width: 100%;
   }
-  @media screen and (max-width: ${vars.tabletSize - 1}px) {
+
+
+  @media screen and (min-width: ${vars.tabletSize}px) and (max-width: ${vars.desktopSize - 1}px){
     height: 10%;
+    border: none;
+    background: ${vars.primaryColor};
+    width: 100%;
   }
 `;
 
@@ -224,7 +233,6 @@ const SecondaryWrapper = styled.div`
 
   @media screen and (max-width: ${vars.tabletSize - 1}px) {
     padding: 0em 1em;
-  }
   }
 `;
 
@@ -242,6 +250,10 @@ const Logo = styled.img`
   align-self: center;
   width: 90%;
   max-width: 230px;
+
+  @media screen and (min-width: ${vars.desktopLargeSize}px) {
+    margin-top: -2.5em !important;
+  }
 
   @media screen and (min-width: ${vars.tabletSize + 1}px) {
     margin-top: -1.5em;

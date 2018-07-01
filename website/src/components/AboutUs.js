@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+import BodyWrapper from "./BodyWrapper";
 import Section from "./Section";
+import ImageMessage from "./ImageMessage";
 
 import Graduate from "../images/education.jpg";
 import Attendees from "../images/attendees.jpg";
@@ -13,7 +15,7 @@ class AboutUs extends React.Component {
   render() {
     return (
       <Wrapper>
-        <IntroImage background={Graduate}>
+        <ImageMessage background={Graduate}>
           <IntroMessage>
             Unionsquare Business School offers high level quality learning,
             flexibility and adaptability to the needs of participants and the
@@ -21,7 +23,7 @@ class AboutUs extends React.Component {
             build business instinct and expertise through mortaring individual
             growth and leadership skills.
           </IntroMessage>
-        </IntroImage>
+        </ImageMessage>
 
         <Section title="OUR HISTORY">
           <p style={{ fontSize: "150%" }}>
@@ -34,7 +36,7 @@ class AboutUs extends React.Component {
             and consultancy services.
           </p>
         </Section>
-        <IntroImage background={Attendees}>
+        <ImageMessage background={Attendees}>
           <IntroMessageCustom position="right">
             <h2>Why Study at Unionsquare?</h2>
             <h4>High quality learning environment</h4>
@@ -51,7 +53,7 @@ class AboutUs extends React.Component {
               diplomas and certificates of attendance in all our courses.
             </p>
           </IntroMessageCustom>
-        </IntroImage>
+        </ImageMessage>
         <Section background={Colleagues}>
           <DoubleGrid>
             <div>
@@ -109,26 +111,6 @@ class AboutUs extends React.Component {
   }
 }
 
-const IntroImage = styled.div`
-  background: url(${props => props.background});
-  height: ${props => (!props.divider ? "550px" : "350px")};
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  @media screen and (max-width: ${vars.mobileSize}px) {
-    background-position: calc(100% + 180px) calc(100% + 0px);
-    height: 690px;
-  }
-  @media screen and (min-width: ${vars.desktopLargeSize + 1}px) {
-    height: ${props => (!props.divider ? "750px" : "50px")};
-    line-height: 3em;
-    font-size: 140%;
-  }
-`;
-
 const IntroMessage = styled.div`
   padding: 1em;
   width: 40%;
@@ -152,8 +134,7 @@ const IntroMessage = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
-  margin-top: -10em;
+const Wrapper = styled(BodyWrapper)`
   p {
     line-height: 2em;
   }
@@ -187,6 +168,8 @@ const IntroMessageCustom = IntroMessage.extend`
   @media screen and (max-width: ${vars.tabletSize}px) {
     right: 0%;
     left: 0%;
+    width: 100%;
+    margin: 0 auto;
   }
 `;
 export default AboutUs;
