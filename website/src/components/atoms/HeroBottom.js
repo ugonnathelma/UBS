@@ -8,7 +8,11 @@ class HeroBottom extends React.Component {
     return (
       <Wrapper>
         <HeroBottomText>
-          <h2>Discover Career - enhancing courses for lifelong learning.</h2>
+          <h2>
+            {" "}
+            Sign up for customized programmes and acquire real-world business
+            skill, knowledge and attitude
+          </h2>
           <span>
             <LearnLink to="/about">
               <span>LEARN MORE</span>

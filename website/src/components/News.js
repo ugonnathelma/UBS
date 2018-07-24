@@ -36,9 +36,11 @@ class News extends React.Component {
                 );
               })
             ) : (
-              <center>
-                <h1>No News yet</h1>
-              </center>
+              <NoNews>
+                <center>
+                  <h3>No News yet</h3>
+                </center>
+              </NoNews>
             )}
           </Section>
           {NewsPosts.length > 0 && (
@@ -79,6 +81,9 @@ const Wrapper = styled.div`
     height: 100vh;
   }
   height: 97vh;
+`;
+
+const NoNews = styled("div")`
 `;
 
 export default News;

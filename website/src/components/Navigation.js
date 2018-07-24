@@ -60,7 +60,7 @@ class Navigation extends React.Component {
               <React.Fragment>
                 <NavLink to="/">HOME</NavLink>
                 <NavLink to="/about">ABOUT US</NavLink>
-                <NavLink to="/programmes">PROGRAMMES</NavLink>
+                {/* <NavLink to="/programmes">PROGRAMMES</NavLink> */}
                 <NavLink to="/news">NEWS</NavLink>
                 <NavLink to="/contact">CONTACT US</NavLink>
               </React.Fragment>
@@ -74,7 +74,7 @@ class Navigation extends React.Component {
         <MobileMenu show={this.state.showNav}>
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/about">ABOUT US</NavLink>
-          <NavLink to="/programmes">PROGRAMMES</NavLink>
+          {/* <NavLink to="/programmes">PROGRAMMES</NavLink> */}
           <NavLink to="/news">NEWS</NavLink>
           <NavLink to="/contact">CONTACT US</NavLink>
         </MobileMenu>

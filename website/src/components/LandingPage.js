@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Hero from "./Hero";
 import Section from "./Section";
 import HeroBottomShape from "./atoms/HeroBottom";
-import BlogSection from "./BlogSection";
+// import BlogSection from "./BlogSection";
 import styled from "styled-components";
 import image from "../images/hero.jpg";
 
@@ -40,9 +40,9 @@ class LandingPage extends React.Component {
             </div>
           </HowToApply>
         </Section>
-        <Section title="LATEST NEWS">
+        {/* <Section title="LATEST NEWS">
           <BlogSection />
-        </Section>
+        </Section> */}
       </React.Fragment>
     );
   }

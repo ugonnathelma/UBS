@@ -24,9 +24,10 @@ class AboutUs extends React.Component {
             growth and leadership skills.
           </IntroMessage>
         </ImageMessage>
-
         <Section title="OUR HISTORY">
-          <p style={{ fontSize: "150%" }}>
+          <p
+            style={{ fontSize: "150%", padding: "2em 0em", lineHeight: "2em" }}
+          >
             Unionsquare Business School was set up in 2017 to provide
             experimental learning in areas of management development, economic
             management, budget planning, entrepreneurship and vocational skills
@@ -35,6 +36,35 @@ class AboutUs extends React.Component {
             financial planning and management. We also engage in policy research
             and consultancy services.
           </p>
+        </Section>
+        <Section title="PRINCIPAL OFFICERS">
+          <PrincipalOfficers
+            style={{ fontSize: "150%", padding: "2em 0em", lineHeight: "2em" }}
+          >
+            <span>
+              Prof. William Akwele <strong>Chairman Governing Council</strong>
+              <br /> Mike A. Onodje, PhD, FCA (NCMD Accredited Management
+              Trainer)
+              <strong>Managing Consultant</strong>
+              <br />Godwin Okpokpo, PhD (NCMD Accredited Management Trainer){" "}
+              <strong>Consultant (Research &amp; Consulting)</strong>
+              <br />Nelson O. Kaine, PhD<strong>
+                Consultant (Learning &amp; Development)
+              </strong>
+            </span>
+            <span>
+              Mrs. Edijanah F. Onodje, B.ED Pol Science &amp; Adult Education{" "}
+              <strong>Registrar</strong>
+              <br />
+              Mrs. Onah Agbamu, M.Sc Sociology{" "}
+              <strong>Secretary Editorial Board</strong>
+              <br />Ernest, B.Sc Econs<br />
+              <strong>Business Officer</strong> <br />Itoje Ochuko, Dip. ICT
+              <strong>
+                Information &amp; Communication Technology Officer (ICT)
+              </strong>
+            </span>
+          </PrincipalOfficers>
         </Section>
         <ImageMessage background={Attendees}>
           <IntroMessageCustom position="right">
@@ -170,6 +200,33 @@ const IntroMessageCustom = IntroMessage.extend`
     left: 0%;
     width: 100%;
     margin: 0 auto;
+  }
+`;
+
+const PrincipalOfficers = styled("p")`
+  display: flex;
+  justify-content: space-between;
+
+  & > span {
+    width: 45%;
+  }
+
+  & > span:first-child {
+    border-right: 1px groove white;
+    width: 50%;
+  }
+
+  strong {
+    display: block;
+  }
+
+  @media screen and (max-width: ${vars.tabletSize}px) {
+    flex-direction: column;
+
+    & > span {
+      width: 100% !important;
+      border:none !important;
+    }
   }
 `;
 export default AboutUs;

@@ -10,10 +10,7 @@ class Hero extends React.Component {
     return (
       <HeroFullWidth>
         <div>
-          <h1>
-            Sign up for customized programmes and acquire real-world business
-            skill, knowledge and attitude
-          </h1>
+          <h1>Discover Career - enhancing courses for lifelong learning.</h1>
           <Button
             color={vars.primaryColor}
             textcolor={vars.whiteColor}
@@ -61,7 +58,7 @@ const HeroFullWidth = styled.div`
       text-align: center;
     }
   }
-  
+
   background-image: url(${HeroImage});
   background-repeat: no-repeat;
   background-position: 0px -30px;
