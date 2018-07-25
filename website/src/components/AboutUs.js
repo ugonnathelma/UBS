@@ -151,16 +151,16 @@ const IntroMessage = styled.div`
   margin-left: 5%;
   right: ${props => props.position === "right" && "5%"};
 
-  @media screen and (max-width: ${vars.desktopSize}px) {
-  }
 
   @media screen and (max-width: ${vars.tabletSize}px) {
     width: 60%;
+    margin-top: 15%;
   }
 
   @media screen and (max-width: ${vars.mobileSize}px) {
     margin-left: 0 auto;
-    width: 80%;
+    width: 90%;
+    margin-top: 40%;
   }
 `;
 
